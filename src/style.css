@@ -79,3 +79,11 @@ ul {
   list-style: none;
   padding-left: 0;
 }
+#sidebar{
+  display: flex;
+  flex-direction: column;
+}
+#sidebarHead{
+  text-align: center;
+  text-decoration-line: underline;
+}

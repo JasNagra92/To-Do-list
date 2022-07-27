@@ -14,6 +14,7 @@ function ProjectGenerator(title) {
   class Project {
     constructor(title) {
       this.title = title;
+      this.inDisplay = false
     }
   }
   const project = new Project(title);
