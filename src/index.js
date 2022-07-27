@@ -1,5 +1,5 @@
 import './style.css';
-import {ShowTodoForm,ShowPrjForm,HidePrjForm,HideTodoForm} from "./form.js";
+import {ShowTodoForm,ShowPrjForm,HidePrjForm,HideTodoForm,getToDoData} from "./ShowForms";
 
 const ToDoBtn = document.getElementById('OpenTodoForm');
 ToDoBtn.addEventListener('click', function(){
@@ -11,4 +11,9 @@ const PrjBtn = document.getElementById('OpenPrjForm');
 PrjBtn.addEventListener('click', function(){
     HideTodoForm();
     ShowPrjForm()
+})
+
+const generateToDoBtn = document.getElementById("generateTodo");
+generateToDoBtn.addEventListener('click',function(){
+    let tdobj1 = getToDoData()
 })

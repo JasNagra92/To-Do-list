@@ -17,26 +17,26 @@
         <div id="todolist"> d</div>
 
         <div class="form-popup" id="HiddenFormDiv">
-            <form name="bookform" action="#" class="form-container">
+            <form action="#" class="form-container" id="ToDoForm">
                 <h1>Add To Do</h1>
 
                 <ul>
-                    <li><label for="title">Title</label></li>
-                    <li><input type="text" id="title" name="title" placeholder="title"></li>
+                    <li><label for="Todotitle">Title</label></li>
+                    <li><input type="text" id="Todotitle" name="title" placeholder="title"></li>
                     <li><label for="description">Description</label></li>
                     <li><input type="text" id="TodoDescription" name="TodoDescription" placeholder="Description"></li>
                     <li><label for="DueDate">Due Date</label></li>
-                    <li><input type="date" id="DueDate" name="DueDate" placeholder="Due Date"></li>
+                    <li><input type="date" id="DueDate" name="dueDate" placeholder="Due Date"></li>
                 </ul>
                 <br>
-                <button type="button" id="generateTodo" class="open-button">Add Book</button>
+                <button type="button" id="generateTodo" class="open-button">+</button>
                 <button type="button" class="cancel" >Cancel</button>
             </form>
         </div>
         <button id="OpenTodoForm" class="fixedButton">Add ToDo</button>
 
         <div class="form-popup" id="HiddenPrjDiv">
-            <form action="#" name="prjform" class="form-container">
+            <form action="#" id="prjForm" class="form-container">
                 <h1>Create Project</h1>
 
                 <ul>
