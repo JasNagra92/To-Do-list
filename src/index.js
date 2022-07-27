@@ -2,7 +2,8 @@ import './style.css';
 import {ShowTodoForm,ShowPrjForm,HidePrjForm,HideTodoForm,getToDoData, getPrjData} from "./ShowForms";
 import {prjtodocombiner} from "./prjtodocombiner"
 
-let globalPrjStorage = {}
+let globalPrjStorage = []
+let activeProject = 'gym'
 
 const ToDoBtn = document.getElementById('OpenTodoForm');
 ToDoBtn.addEventListener('click', function(){
@@ -19,13 +20,13 @@ PrjBtn.addEventListener('click', function(){
 const generateToDoBtn = document.getElementById("generateTodo");
 generateToDoBtn.addEventListener('click',function(){
     let tdobj = getToDoData();
-    prjtodocombiner(globalPrjStorage.prj,tdobj);
-    console.log(globalObjPrjStorage.prj)
-    
+    let prj = globalPrjStorage.find(prj => prj.title == activeProject )
+    prjtodocombiner(prj,tdobj);    
+    console.log(globalPrjStorage)
 })
 
 const generatePrjBtn = document.getElementById('generatePrj');
 generatePrjBtn.addEventListener('click', function(){
     let prj = getPrjData();
-    globalPrjStorage.prj = prj
+    globalPrjStorage.push(prj)
 })

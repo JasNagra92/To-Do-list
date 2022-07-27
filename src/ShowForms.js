@@ -27,7 +27,6 @@ function getToDoData() {
 function getPrjData(){
     let prjtitle = document.getElementById('projectname').value;
     let prj = ProjectGenerator(prjtitle);
-    console.log(prj)
     return prj
 }
 
