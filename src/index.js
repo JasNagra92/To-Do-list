@@ -15,5 +15,6 @@ PrjBtn.addEventListener('click', function(){
 
 const generateToDoBtn = document.getElementById("generateTodo");
 generateToDoBtn.addEventListener('click',function(){
-    let tdobj1 = getToDoData()
+    let tdobj = getToDoData()
+    console.log(tdobj)
 })

@@ -1,3 +1,5 @@
+import {ToDoGenerator} from "./ToDoModule"
+
 const HiddenFormDiv = document.getElementById("HiddenFormDiv");
 const HiddenPrjDiv = document.getElementById("HiddenPrjDiv");
 
@@ -18,11 +20,8 @@ function getToDoData() {
   let title = document.getElementById("Todotitle").value;
   let description = document.getElementById("TodoDescription").value;
   let dueDate = document.getElementById("DueDate").value;
-  return {
-    title,
-    description,
-    dueDate,
-  };
+  let obj = ToDoGenerator(title,description,dueDate);
+  return obj
 }
 
 export { ShowPrjForm, ShowTodoForm, HideTodoForm, HidePrjForm, getToDoData };
