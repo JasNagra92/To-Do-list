@@ -2,6 +2,7 @@ import './style.css';
 import {ShowTodoForm,ShowPrjForm,HidePrjForm,HideTodoForm,getToDoData, getPrjData} from "./ShowForms";
 import {prjtodocombiner} from "./prjtodocombiner"
 import {populateSidebar} from "./sideBarDom"
+import {populateTodoList} from "./todoDom"
 
 let globalPrjStorage = []
 let activeProject;
@@ -23,6 +24,7 @@ generateToDoBtn.addEventListener('click',function(){
     let tdobj = getToDoData();
     let prj = globalPrjStorage.find(prj => prj.title == activeProject )
     prjtodocombiner(prj,tdobj);
+    populateTodoList(tdobj);
     document.forms['todoForm'].reset();
     HideTodoForm();
 })

@@ -87,3 +87,18 @@ ul {
   text-align: center;
   text-decoration-line: underline;
 }
+#todolist{
+  display: flex;
+  flex-direction: column;
+}
+.todoDiv{
+  display: flex;
+}
+.todoTitle{
+  text-align: center;
+  flex: 1;
+}
+.descriptiondiv{
+  flex:3;
+  
+}
