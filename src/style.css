@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+.mainContent {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 4fr;
+}
+.title {
+  grid-area: 1/2/2/3;
+}
+#sidebar {
+  grid-area: 1/1/3/2;
+}
+#todolist {
+  grid-area: 2/2/3/3;
+}
+#HiddenFormDiv,
+#HiddenPrjDiv {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 50%;
+  transform: translateX(-50%);
+  left: 50%;
+  z-index: 9;
+}
+.form-container {
+  max-width: 600px;
+  width: 30vw;
+  padding: 10px;
+  background-color: white;
+  text-align: center;
+  border: 3px solid black;
+}
+.fixedButton {
+  position: fixed;
+  font-style: bold;
+  bottom: 10px;
+  right: 10px;
+  padding: 20px;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  background-color: lightblue;
+}
+#OpenPrjForm {
+  position: fixed;
+  font-style: bold;
+  bottom: 10px;
+  left: 5px;
+  width: 100px;
+  padding: 20px;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  background-color: lightblue;
+}
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(200, 200, 200);
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+td,
+th {
+  border: 1px solid rgb(190, 190, 190);
+  padding: 10px 20px;
+}
+
+th {
+  background-color: rgb(235, 235, 235);
+}
+
+td {
+  text-align: center;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}

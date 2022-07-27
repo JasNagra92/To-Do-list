@@ -5,9 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./main.js" defer></script>
-    <title>To Do List</title>
+    <title>To Do Manager</title>
+
 </head>
 <body>
-    
+    <div class="mainContent">
+        <h1 class="title">To Do App</h1>
+        <div id="sidebar"> 
+            <button id="OpenPrjForm" class="fixedButton">Create Project</button>
+        </div>
+        <div id="todolist"> d</div>
+
+        <div class="form-popup" id="HiddenFormDiv">
+            <form name="bookform" action="#" class="form-container">
+                <h1>Add To Do</h1>
+
+                <ul>
+                    <li><label for="title">Title</label></li>
+                    <li><input type="text" id="title" name="title" placeholder="title"></li>
+                    <li><label for="description">Description</label></li>
+                    <li><input type="text" id="TodoDescription" name="TodoDescription" placeholder="Description"></li>
+                    <li><label for="DueDate">Due Date</label></li>
+                    <li><input type="date" id="DueDate" name="DueDate" placeholder="Due Date"></li>
+                </ul>
+                <br>
+                <button type="button" id="generateTodo" class="open-button">Add Book</button>
+                <button type="button" class="cancel" >Cancel</button>
+            </form>
+        </div>
+        <button id="OpenTodoForm" class="fixedButton">Add ToDo</button>
+
+        <div class="form-popup" id="HiddenPrjDiv">
+            <form action="#" name="prjform" class="form-container">
+                <h1>Create Project</h1>
+
+                <ul>
+                    <li><label for="projectName">Project Name</label></li>
+                    <li><input type="text" id="projectname" name="projectName" placeholder="ProjectName"></li>
+                </ul>
+                <br>
+                <button type="button" id="generatePrj" class="open-button">Create Project</button>
+                <button type="button" class="cancel">Cancel</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
