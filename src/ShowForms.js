@@ -14,4 +14,4 @@ function HideTodoForm(){
 function HidePrjForm(){
     HiddenPrjDiv.style.display = "none"
 }
-export{ShowPrjForm, ShowTodoForm}
+export{ShowPrjForm, ShowTodoForm, HideTodoForm, HidePrjForm}
