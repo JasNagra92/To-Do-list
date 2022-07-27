@@ -8,6 +8,7 @@
 }
 .title {
   grid-area: 1/2/2/3;
+  text-align: center;
 }
 #sidebar {
   grid-area: 1/1/3/2;
@@ -100,5 +101,10 @@ ul {
 }
 .descriptiondiv{
   flex:3;
-  
+  align-self: center;
+}
+.dueDateDiv{
+  flex: 1;
+  text-align: center;
+  align-self: center
 }
