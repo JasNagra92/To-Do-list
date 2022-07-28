@@ -5,6 +5,7 @@ function populateSidebar(prjObj){
     const prj = document.createElement('h4');
     console.log(prjObj)
     prj.innerHTML = prjObj["title"];
+    prj.id = prjObj["title"]
     sideBar.appendChild(prjdiv);
     prjdiv.appendChild(prj)
 }

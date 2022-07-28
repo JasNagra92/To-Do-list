@@ -5,6 +5,7 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 4fr;
+  max-width: 80vw;
 }
 .title {
   grid-area: 1/2/2/3;
@@ -101,10 +102,16 @@ ul {
 }
 .descriptiondiv{
   flex:3;
-  align-self: center;
 }
 .dueDateDiv{
   flex: 1;
   text-align: center;
-  align-self: center
+}
+.todoTitle,
+.descriptiondiv,
+.dueDateDiv{
+  border:1px solid black
+}
+.dueDate{
+  text-align: center;
 }

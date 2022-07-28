@@ -2,10 +2,20 @@ import './style.css';
 import {ShowTodoForm,ShowPrjForm,HidePrjForm,HideTodoForm,getToDoData, getPrjData} from "./ShowForms";
 import {prjtodocombiner} from "./prjtodocombiner"
 import {populateSidebar} from "./sideBarDom"
-import {populateTodoList} from "./todoDom"
+import {populateTodoList, createToDoHeadings} from "./todoDom"
+import {ToDoExtractor} from "./ToDoModule"
 
+createToDoHeadings();
 let globalPrjStorage = []
 let activeProject;
+
+const sideBar = document.getElementById('sidebar')
+sideBar.addEventListener('click', function(e){
+    let selectedPrj = e.target.id;
+    activeProject = selectedPrj
+    let displayedPrj = globalPrjStorage.find(prj => prj.title == selectedPrj);
+    ToDoExtractor(displayedPrj);
+})
 
 const ToDoBtn = document.getElementById('OpenTodoForm');
 ToDoBtn.addEventListener('click', function(){

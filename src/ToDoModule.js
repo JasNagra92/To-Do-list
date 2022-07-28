@@ -1,3 +1,4 @@
+import {populateTodoList} from "./todoDom"
 function ToDoGenerator(title, description, dueDate) {
   class ToDo {
     constructor(title, description, dueDate) {
@@ -20,4 +21,14 @@ function ProjectGenerator(title) {
   const project = new Project(title);
   return project;
 }
-export { ToDoGenerator, ProjectGenerator };
+
+function ToDoExtractor(prjobj){
+    let tempArray = Object.values(prjobj)
+    tempArray.forEach(item => {
+        if (typeof item == "object"){
+            populateTodoList(item)
+        }
+    })
+}
+
+export { ToDoGenerator, ProjectGenerator, ToDoExtractor, findProject };
