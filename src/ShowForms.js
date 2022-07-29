@@ -1,4 +1,4 @@
-import {ToDoGenerator, ProjectGenerator} from "./ToDoModule"
+import { ToDoGenerator, ProjectGenerator } from "./ToDoModule";
 
 const HiddenFormDiv = document.getElementById("HiddenFormDiv");
 const HiddenPrjDiv = document.getElementById("HiddenPrjDiv");
@@ -20,14 +20,21 @@ function getToDoData() {
   let title = document.getElementById("Todotitle").value;
   let description = document.getElementById("TodoDescription").value;
   let dueDate = document.getElementById("DueDate").value;
-  let obj = ToDoGenerator(title,description,dueDate);
-  return obj
+  let obj = ToDoGenerator(title, description, dueDate);
+  return obj;
 }
 
-function getPrjData(){
-    let prjtitle = document.getElementById('projectname').value;
-    let prj = ProjectGenerator(prjtitle);
-    return prj
+function getPrjData() {
+  let prjtitle = document.getElementById("projectname").value;
+  let prj = ProjectGenerator(prjtitle);
+  return prj;
 }
 
-export { ShowPrjForm, ShowTodoForm, HideTodoForm, HidePrjForm, getToDoData, getPrjData };
+export {
+  ShowPrjForm,
+  ShowTodoForm,
+  HideTodoForm,
+  HidePrjForm,
+  getToDoData,
+  getPrjData,
+};

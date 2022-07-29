@@ -81,37 +81,37 @@ ul {
   list-style: none;
   padding-left: 0;
 }
-#sidebar{
+#sidebar {
   display: flex;
   flex-direction: column;
 }
-#sidebarHead{
+#sidebarHead {
   text-align: center;
   text-decoration-line: underline;
 }
-#todolist{
+#todolist {
   display: flex;
   flex-direction: column;
 }
-.todoDiv{
+.todoDiv {
   display: flex;
 }
-.todoTitle{
+.todoTitle {
   text-align: center;
   flex: 1;
 }
-.descriptiondiv{
-  flex:3;
+.descriptiondiv {
+  flex: 3;
 }
-.dueDateDiv{
+.dueDateDiv {
   flex: 1;
   text-align: center;
 }
 .todoTitle,
 .descriptiondiv,
-.dueDateDiv{
-  border:1px solid black
+.dueDateDiv {
+  border: 1px solid black;
 }
-.dueDate{
+.dueDate {
   text-align: center;
 }

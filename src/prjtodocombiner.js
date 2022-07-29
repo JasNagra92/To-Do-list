@@ -1,4 +1,4 @@
-function prjtodocombiner (prjobj,todo){
-    prjobj[`${todo.title}`] = todo
+function prjtodocombiner(prjobj, todo) {
+  prjobj[`${todo.title}`] = todo;
 }
-export {prjtodocombiner}
+export { prjtodocombiner };

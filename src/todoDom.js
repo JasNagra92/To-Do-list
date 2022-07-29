@@ -43,4 +43,10 @@ function populateTodoList(todoObj) {
   todoDiv.appendChild(dueDateDiv);
   todolist.appendChild(todoDiv);
 }
-export { populateTodoList, createToDoHeadings };
+function clearToDoDisplay() {
+  const ToDoDisplay = document.getElementById("todolist");
+  while (ToDoDisplay.firstChild) {
+    ToDoDisplay.removeChild(ToDoDisplay.firstChild);
+  }
+}
+export { populateTodoList, createToDoHeadings, clearToDoDisplay };
