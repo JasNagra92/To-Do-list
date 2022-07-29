@@ -35,6 +35,8 @@ function populateTodoList(todoObj) {
   dueDate.classList.add("dueDate");
   dueDate.textContent = todoObj["dueDate"];
   dueDateDiv.appendChild(dueDate);
+  const editAndDelete = document.createElement("div")
+  todoDiv.appendChild(editAndDelete);
 
   titleDiv.appendChild(title);
   descriptionDiv.appendChild(description);
