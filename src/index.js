@@ -61,7 +61,7 @@ generateToDoBtn.addEventListener("click", function () {
   let prj = globalPrjStorage.find((prj) => prj.title == activeProject);
   prjtodocombiner(prj, tdobj);
   storePrj(globalPrjStorage);
-  populateTodoList(tdobj);
+  ToDoExtractor(prj);
   document.forms["todoForm"].reset();
   HideTodoForm();
 });
@@ -71,8 +71,9 @@ generatePrjBtn.addEventListener("click", function () {
   let prj = getPrjData();
   globalPrjStorage.push(prj);
   storePrj(globalPrjStorage);
-  console.log(globalPrjStorage);
   activeProject = prj.title;
+  clearToDoDisplay();
+  createToDoHeadings();
   globalPrjStorage.forEach((prj) => {
     if (prj.inDisplay == false) {
       populateSidebar(prj);
